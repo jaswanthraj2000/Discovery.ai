@@ -1,0 +1,10 @@
+# TanStack Start needs vite preview (SSR), not Caddy static hosting.
+# https://station.railway.com/questions/deployment-are-failing-60edfc41
+[variables]
+NIXPACKS_SPA_CADDY = "false"
+
+[phases.build]
+cmds = ["pnpm run build"]
+
+[start]
+cmd = "pnpm start"
